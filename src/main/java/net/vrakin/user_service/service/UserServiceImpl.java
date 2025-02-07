@@ -1,7 +1,10 @@
 package net.vrakin.user_service.service;
 
+import net.vrakin.user_service.dto.UserRequestDTO;
 import net.vrakin.user_service.entity.User;
+import net.vrakin.user_service.mapper.UserMapper;
 import net.vrakin.user_service.repository.UserRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,9 +22,24 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository) {
+    private UserMapper userMapper;
+
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, UserMapper userMapper) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+    public User createUser(UserRequestDTO dto) {
+        if (userRepository.existsByName(dto.getName())) {
+            throw new IllegalArgumentException("Користувач з таким ім'ям вже існує!");
+        }
+
+        User user = userMapper.toEntity(dto);
+        user.setPassword(passwordEncoder.encode(dto.getPassword()));
+
+        return userRepository.save(user);
     }
 
     @Override

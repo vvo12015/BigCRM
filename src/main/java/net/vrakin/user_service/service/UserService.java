@@ -1,6 +1,8 @@
 package net.vrakin.user_service.service;
 
 import java.util.List;
+
+import net.vrakin.user_service.dto.UserRequestDTO;
 import net.vrakin.user_service.entity.User;
 import java.util.Optional;
 
@@ -88,4 +90,11 @@ public interface UserService {
      * @return Список об'єктів {@link User}, що відповідають шаблону.
      */
     List<User> findByNameLike(String namePattern);
+    /**
+     * Створює користувача в базі даних.
+     *
+     * @param dto Об'єкт {@link UserRequestDTO}, який потрібно створити.
+     * @return Створений об'єкт {@link User}.
+     */
+    User createUser(UserRequestDTO dto);
 }

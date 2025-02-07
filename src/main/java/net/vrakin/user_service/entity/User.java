@@ -40,7 +40,7 @@ public class User {
     private String phone;
 
     @NotNull(message = "Active status is required")
-    @Column(name = "active_status", nullable = false)
+    @Column(name = "active_status", nullable = false, columnDefinition = "TINYINT(1)")
     private Boolean activeStatus;
 
     @PastOrPresent(message = "Start date cannot be in the future")
