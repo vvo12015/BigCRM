@@ -1,6 +1,7 @@
 package net.vrakin.user_service.controller;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import net.vrakin.user_service.dto.UserRequestDTO;
 import net.vrakin.user_service.dto.UserResponseDTO;
 import net.vrakin.user_service.entity.User;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -58,12 +60,15 @@ public class UserController {
 
     @PutMapping("/{id}")
     public ResponseEntity<UserResponseDTO> updateUser(@PathVariable Long id, @Valid @RequestBody UserRequestDTO userRequestDTO) {
-        if (!userService.findById(id).isPresent()) {
+        if (userService.findById(id).isEmpty()) {
             return ResponseEntity.notFound().build();
         }
         User user = userMapper.toEntity(userRequestDTO);
         user.setId(id);
-        return ResponseEntity.ok(userMapper.toResponseDTO(userService.save(user)));
+
+        UserResponseDTO responseDTO = userMapper.toResponseDTO(userService.save(user));
+
+        return ResponseEntity.ok(responseDTO);
     }
 
     @DeleteMapping("/{id}")

@@ -1,166 +1,162 @@
-2025-02-07 17:34:52 [restartedMain] INFO  n.v.u.UserServiceApplication - Starting UserServiceApplication using Java 22.0.1 with PID 4716 (C:\projects\BigCRM\user-service\target\classes started by Asus in C:\projects\BigCRM\user-service)
-2025-02-07 17:34:52 [restartedMain] INFO  n.v.u.UserServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-02-07 17:34:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-02-07 17:34:53 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-02-07 17:34:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-07 17:34:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 251 ms. Found 1 JPA repository interface.
-2025-02-07 17:35:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-02-07 17:35:02 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-02-07 17:35:02 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-02-07 17:35:02 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-02-07 17:35:02 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9141 ms
-2025-02-07 17:35:03 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-02-07 17:35:04 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27c0ffb7
-2025-02-07 17:35:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-02-07 17:35:05 [restartedMain] INFO  liquibase.changelog - Creating database history table with name: userdb.databasechangelog
-2025-02-07 17:35:06 [restartedMain] INFO  liquibase.changelog - Reading from userdb.databasechangelog
-2025-02-07 17:35:07 [restartedMain] INFO  liquibase.lockservice - Successfully acquired change log lock
-2025-02-07 17:35:07 [restartedMain] INFO  liquibase.command - Using deploymentId: 8942507864
-2025-02-07 17:35:07 [restartedMain] INFO  liquibase.changelog - Reading from userdb.databasechangelog
-2025-02-07 17:35:07 [restartedMain] INFO  liquibase.ui - Running Changeset: db/changelog/V0_20250128_create_users_table.yaml::1::valentyn_vrakin
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.changelog - Table users created
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.changelog - ChangeSet db/changelog/V0_20250128_create_users_table.yaml::1::valentyn_vrakin ran successfully in 98ms
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.ui - Running Changeset: db/changelog/V1_20250128_add_password_column_to_users.yaml::2::valentyn_vrakin
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.changelog - Columns password(VARCHAR(255)) added to users
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.changelog - ChangeSet db/changelog/V1_20250128_add_password_column_to_users.yaml::2::valentyn_vrakin ran successfully in 171ms
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.util - UPDATE SUMMARY
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.util - Run:                          2
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.util - Previously run:               0
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.util - Filtered out:                 0
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.util - -------------------------------
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.util - Total change sets:            2
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.util - Update summary generated
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.command - Update command completed successfully.
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 2
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.lockservice - Successfully released change log lock
-2025-02-07 17:35:08 [restartedMain] INFO  liquibase.command - Command execution complete
-2025-02-07 17:35:08 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-07 17:35:09 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-02-07 17:35:09 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-02-07 17:35:10 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-07 17:35:10 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-02-07 17:35:10 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-02-07 17:35:12 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-07 17:35:12 [restartedMain] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6405cbfc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2025-02-07 17:35:13 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [active_status] in table [users]; found [tinyint (Types#TINYINT)], but expecting [bit (Types#BOOLEAN)]
-2025-02-07 17:35:13 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [active_status] in table [users]; found [tinyint (Types#TINYINT)], but expecting [bit (Types#BOOLEAN)]
-2025-02-07 17:35:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-02-07 17:35:13 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2025-02-07 17:35:13 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-02-07 17:35:13 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+2025-02-08 07:23:23 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 10340 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 07:23:23 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 07:23:26 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-07 17:35:13 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [active_status] in table [users]; found [tinyint (Types#TINYINT)], but expecting [bit (Types#BOOLEAN)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at net.vrakin.user_service.UserServiceApplication.main(UserServiceApplication.java:10)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [active_status] in table [users]; found [tinyint (Types#TINYINT)], but expecting [bit (Types#BOOLEAN)]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
-	... 18 common frames omitted
-Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [active_status] in table [users]; found [tinyint (Types#TINYINT)], but expecting [bit (Types#BOOLEAN)]
-	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:169)
-	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:156)
-	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:46)
-	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:99)
-	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:77)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:289)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
-	... 22 common frames omitted
-2025-02-07 17:45:14 [restartedMain] INFO  n.v.u.UserServiceApplication - Starting UserServiceApplication using Java 22.0.1 with PID 7548 (C:\projects\BigCRM\user-service\target\classes started by Asus in C:\projects\BigCRM\user-service)
-2025-02-07 17:45:14 [restartedMain] INFO  n.v.u.UserServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-02-07 17:45:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-02-07 17:45:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-02-07 17:45:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-02-07 17:45:19 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 156 ms. Found 1 JPA repository interface.
-2025-02-07 17:45:22 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-02-07 17:45:22 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-02-07 17:45:22 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-02-07 17:45:22 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-02-07 17:45:22 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7676 ms
-2025-02-07 17:45:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-02-07 17:45:23 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34546080
-2025-02-07 17:45:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.changelog - Reading from userdb.databasechangelog
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.ui - Database is up to date, no changesets to execute
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.changelog - Reading from userdb.databasechangelog
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.util - UPDATE SUMMARY
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.util - Run:                          0
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.util - Previously run:               2
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.util - Filtered out:                 0
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.util - -------------------------------
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.util - Total change sets:            2
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.util - Update summary generated
-2025-02-07 17:45:25 [restartedMain] INFO  liquibase.command - Command execution complete
-2025-02-07 17:45:26 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-02-07 17:45:26 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.5.Final
-2025-02-07 17:45:26 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2025-02-07 17:45:27 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-02-07 17:45:27 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-02-07 17:45:27 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-02-07 17:45:29 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-02-07 17:45:29 [restartedMain] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2cb6e4fb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2025-02-07 17:45:29 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-02-07 17:45:34 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
-
-Using generated security password: 8e25cc51-be33-4c6a-bf69-a652649efb51
+Using generated security password: 8c5c3046-c5ab-4ea9-9950-d32a392b5f4d
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-02-07 17:45:34 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-02-07 17:45:35 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
-2025-02-07 17:45:35 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2025-02-07 17:45:36 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2025-02-07 17:45:36 [restartedMain] INFO  n.v.u.UserServiceApplication - Started UserServiceApplication in 23.491 seconds (process running for 25.338)
-2025-02-07 17:45:50 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-07 17:45:50 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-02-07 17:45:50 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2025-02-07 18:22:12 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-07 18:22:12 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
-2025-02-07 18:22:12 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-02-07 18:22:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2025-02-07 18:22:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-02-08 07:23:26 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 07:23:27 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 07:23:27 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 07:23:27 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-02-08 07:23:27 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.503 seconds (process running for 6.193)
+2025-02-08 07:23:27 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<net.vrakin.user_service.dto.UserResponseDTO> net.vrakin.user_service.controller.UserController.updateUser(java.lang.Long,net.vrakin.user_service.dto.UserRequestDTO): [Field error in object 'userRequestDTO' on field 'password': rejected value [null]; codes [NotBlank.userRequestDTO.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequestDTO.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
+2025-02-08 07:23:27 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<net.vrakin.user_service.dto.UserResponseDTO> net.vrakin.user_service.controller.UserController.createUser(net.vrakin.user_service.dto.UserRequestDTO): [Field error in object 'userRequestDTO' on field 'password': rejected value [null]; codes [NotBlank.userRequestDTO.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequestDTO.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
+2025-02-08 07:29:07 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 15060 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 07:29:07 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 07:29:10 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 61718523-98bb-4aa0-84a7-0bb541b08890
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 07:29:10 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 07:29:11 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 07:29:11 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 07:29:11 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 07:29:11 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.401 seconds (process running for 6.007)
+2025-02-08 07:29:11 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<net.vrakin.user_service.dto.UserResponseDTO> net.vrakin.user_service.controller.UserController.updateUser(java.lang.Long,net.vrakin.user_service.dto.UserRequestDTO): [Field error in object 'userRequestDTO' on field 'password': rejected value [null]; codes [NotBlank.userRequestDTO.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequestDTO.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
+2025-02-08 07:29:12 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<net.vrakin.user_service.dto.UserResponseDTO> net.vrakin.user_service.controller.UserController.createUser(net.vrakin.user_service.dto.UserRequestDTO): [Field error in object 'userRequestDTO' on field 'password': rejected value [null]; codes [NotBlank.userRequestDTO.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequestDTO.password,password]; arguments []; default message [password]]; default message [must not be blank]] ]
+2025-02-08 07:34:02 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 21500 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 07:34:02 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 07:34:05 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 2baa90e0-9171-40ee-b08d-4b1714605785
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 07:34:05 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 07:34:06 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 07:34:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 07:34:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-02-08 07:34:06 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.253 seconds (process running for 5.823)
+2025-02-08 07:39:56 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 9708 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 07:39:56 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 07:39:59 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 43e2dead-69da-428c-846b-1c34bce5296f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 07:39:59 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 07:40:00 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 07:40:00 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 07:40:00 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 07:40:00 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.327 seconds (process running for 5.877)
+2025-02-08 07:58:08 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 17208 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 07:58:08 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 07:58:10 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: c2863eab-6794-4b1c-802e-53f8b0fc0bfe
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 07:58:10 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 07:58:11 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 07:58:11 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 07:58:11 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-02-08 07:58:11 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.473 seconds (process running for 6.013)
+2025-02-08 07:58:44 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 18416 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 07:58:44 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 07:58:47 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1056dfe0-f444-4f9e-84ce-28e970d832a6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 07:58:47 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 07:58:48 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 07:58:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 07:58:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 07:58:48 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.263 seconds (process running for 5.776)
+2025-02-08 07:58:48 [main] INFO  n.v.u.controller.UserController - UserResponseDTO(id=1, email=john@example.com, name=John Doe, phone=null, activeStatus=null, startDate=null, birthDate=null, description=null)
+2025-02-08 08:00:57 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 19852 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 08:00:57 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 08:01:00 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1c7533dc-e7a9-4d3a-841b-d17d472fcae8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 08:01:00 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 08:01:01 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 08:01:01 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 08:01:01 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 08:01:01 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.445 seconds (process running for 6.011)
+2025-02-08 08:01:02 [main] INFO  n.v.u.controller.UserController - UserResponseDTO(id=1, email=john@example.com, name=John Doe, phone=null, activeStatus=null, startDate=null, birthDate=null, description=null)
+2025-02-08 08:04:31 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 18644 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 08:04:31 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 08:04:34 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 6b760ca6-8e00-45d6-864a-9d92cdbc8bcf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 08:04:34 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 08:04:35 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 08:04:35 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 08:04:35 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 08:04:35 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.354 seconds (process running for 5.906)
+2025-02-08 08:06:26 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 5460 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 08:06:26 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 08:06:29 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 3518081b-0c18-433b-a0f7-48539da07bdb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 08:06:29 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 08:06:30 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 08:06:30 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 08:06:30 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-02-08 08:06:30 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.193 seconds (process running for 5.722)
+2025-02-08 08:07:44 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 8868 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 08:07:44 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 08:07:46 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 8895a1b2-2290-4799-9372-ebe546cc2430
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 08:07:47 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 08:07:47 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 08:07:47 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 08:07:47 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 08:07:47 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.321 seconds (process running for 5.857)
+2025-02-08 08:08:50 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 7488 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 08:08:50 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 08:08:53 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 667ddb3e-e7d1-42a7-86e1-c9907122675f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 08:08:53 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 08:08:54 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 08:08:54 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 08:08:54 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 08:08:54 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.332 seconds (process running for 5.886)
+2025-02-08 08:12:23 [main] INFO  n.v.user_service.UserControllerTest - Starting UserControllerTest using Java 22.0.1 with PID 9784 (started by HP in D:\prog\projects\BigCRM)
+2025-02-08 08:12:23 [main] INFO  n.v.user_service.UserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-02-08 08:12:25 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0b0d1063-7514-4f6e-ba87-64b64aea3bda
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-02-08 08:12:25 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-02-08 08:12:26 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-02-08 08:12:26 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-02-08 08:12:26 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-02-08 08:12:26 [main] INFO  n.v.user_service.UserControllerTest - Started UserControllerTest in 4.235 seconds (process running for 5.804)

@@ -32,7 +32,8 @@ public class UserServiceImpl implements UserService {
     }
 
     public User createUser(UserRequestDTO dto) {
-        if (userRepository.existsByName(dto.getName())) {
+        if (userRepository.existsByName(dto.getName()) ||
+                userRepository.existsByEmail(dto.getEmail())) {
             throw new IllegalArgumentException("Користувач з таким ім'ям вже існує!");
         }
 
@@ -44,7 +45,26 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User save(User user) {
+
+        checkUniqueEmailName(user);
+
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+
         return userRepository.save(user);
+    }
+
+    private void checkUniqueEmailName(User user) {
+        var findUserByEmail = userRepository.findByEmail(user.getEmail());
+
+        if (findUserByEmail.isPresent() && !findUserByEmail.get().getId().equals(user.getId())) {
+            throw new IllegalArgumentException("Користувач з таким email вже існує!");
+        }
+
+        var findUserByName = userRepository.findByName(user.getName());
+
+        if (findUserByName.isPresent() && !findUserByName.get().getId().equals(user.getId())) {
+            throw new IllegalArgumentException("Користувач з таким name вже існує!");
+        }
     }
 
     @Override

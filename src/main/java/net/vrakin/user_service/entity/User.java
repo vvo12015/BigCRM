@@ -3,6 +3,7 @@ package net.vrakin.user_service.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
+import net.vrakin.user_service.validation.UniqueValidation;
 
 import java.time.LocalDate;
 
@@ -22,6 +23,7 @@ public class User {
 
     @NotBlank(message = "Email is required")
     @Email(message = "Invalid email format")
+    @UniqueValidation
     @Column(nullable = false, unique = true)
     private String email;
 
@@ -32,6 +34,7 @@ public class User {
 
     @NotBlank(message = "Name is required")
     @Column(nullable = false, unique = true)
+    @UniqueValidation
     private String name;
 
     @NotBlank(message = "Phone number is required")

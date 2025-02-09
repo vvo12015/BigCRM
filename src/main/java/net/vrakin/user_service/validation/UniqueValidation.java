@@ -20,5 +20,5 @@ public @interface UniqueValidation {
 
     Class<? extends Payload>[] payload() default {};
 
-    String fieldName();
+    String fieldName() default "";
 }
